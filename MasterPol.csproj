@@ -177,6 +177,10 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model\Partners.cs" />
+    <Compile Include="Model\PartnerTypes.cs" />
+    <Compile Include="Model\Products.cs" />
+    <Compile Include="Model\ProductTypes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -203,5 +207,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
