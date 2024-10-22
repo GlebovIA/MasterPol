@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace MasterPol.Model
+﻿namespace MasterPol.Model
 {
-    public class Products
+    public class ProductsModel
     {
         private int _id { get; set; }
         private int _article { get; set; }
@@ -20,6 +14,7 @@ namespace MasterPol.Model
         private int _realCost { get; set; }
         private int _workshopNumber { get; set; }
         private int _countOfWorkers { get; set; }
+        private string _materials { get; set; }
         public int id
         {
             get { return _id; }
@@ -55,7 +50,7 @@ namespace MasterPol.Model
             get { return _massNetto; }
             set { _massNetto = value; }
         }
-            public int massBrutto
+        public int massBrutto
         {
             get { return _massBrutto; }
             set { _massBrutto = value; }
@@ -79,6 +74,11 @@ namespace MasterPol.Model
         {
             get { return _countOfWorkers; }
             set { _countOfWorkers = value; }
+        }
+        public string materials
+        {
+            get { return _materials; }
+            set { _materials = value; }
         }
     }
 }

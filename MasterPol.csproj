@@ -171,16 +171,23 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Classes\DbConnection.cs" />
+    <Compile Include="Classes\Queries.cs" />
+    <Compile Include="Contexts\PartnersContext.cs" />
+    <Compile Include="Contexts\PartnersProductsContext.cs" />
+    <Compile Include="Contexts\PartnersTypesContext.cs" />
+    <Compile Include="Contexts\ProductsContext.cs" />
+    <Compile Include="Contexts\ProductTypesContext.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Model\Partners.cs" />
-    <Compile Include="Model\PartnerTypes.cs" />
-    <Compile Include="Model\Products.cs" />
-    <Compile Include="Model\ProductTypes.cs" />
+    <Compile Include="Model\PartnerProductsModel.cs" />
+    <Compile Include="Model\PartnersModel.cs" />
+    <Compile Include="Model\PartnerTypeModel.cs" />
+    <Compile Include="Model\ProductsModel.cs" />
+    <Compile Include="Model\ProductTypeModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>

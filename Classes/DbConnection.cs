@@ -8,7 +8,7 @@ namespace MasterPol.Classes
     {
         public static string ConnectionString = "server=127.0.0.1;port=3307;database=MasterPol;user=root;pwd=;";
         public static MySqlConnection Connection { get; set; }
-        public MySqlConnection CreateConnection()
+        public static MySqlConnection CreateConnection()
         {
             try
             {
@@ -26,15 +26,15 @@ namespace MasterPol.Classes
                 return null;
             }
         }
-        public void RestarConnection()
+        public static void RestarConnection()
         {
-            if(Connection.State == ConnectionState.Open)
+            if (Connection.State == ConnectionState.Open)
             {
                 Connection.Close();
             }
             Connection.Open();
         }
-        public void CloseConnection()
+        public static void CloseConnection()
         {
             Connection.Close();
         }

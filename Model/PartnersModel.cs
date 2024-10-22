@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace MasterPol.Model
+﻿namespace MasterPol.Model
 {
-    public class Partners
+    public class PartnersModel
     {
         private int _id { get; set; }
         private int _type { get; set; }
