@@ -8,7 +8,7 @@ namespace MasterPol.Contexts
 {
     public class PartnersProductsContext
     {
-        public static List<PartnerProductsModel> AllPartnerTypes()
+        public static List<PartnerProductsModel> AllPartnerProducts()
         {
             try
             {
@@ -22,7 +22,10 @@ namespace MasterPol.Contexts
                         PartnerProductsModel type = new PartnerProductsModel()
                         {
                             id = reader.GetInt32(0),
-                            name = reader.GetString(1)
+                            product = reader.GetInt32(1),
+                            partner = reader.GetInt32(2),
+                            count = reader.GetInt32(3),
+                            dateOfSell = reader.GetDateTime(4)
                         };
                         AllPartnersProducts.Add(type);
                     }

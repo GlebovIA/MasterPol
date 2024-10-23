@@ -6,7 +6,7 @@ namespace MasterPol.Classes
 {
     public class DbConnection
     {
-        public static string ConnectionString = "server=127.0.0.1;port=3307;database=MasterPol;user=root;pwd=;";
+        public static string ConnectionString = "server=127.0.0.1;port=3306;database=MasterPol;user=root;pwd=;";
         public static MySqlConnection Connection { get; set; }
         public static MySqlConnection CreateConnection()
         {
@@ -16,7 +16,7 @@ namespace MasterPol.Classes
                 {
                     Connection = new MySqlConnection(ConnectionString);
                 }
-                Connection.Open();
+                RestarConnection();
                 return Connection;
             }
             catch

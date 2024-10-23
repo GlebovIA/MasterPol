@@ -1,5 +1,6 @@
 ﻿using MasterPol.Classes;
 using MasterPol.Model;
+using MasterPol.View.Elements;
 using MySql.Data.MySqlClient;
 using System.Collections.Generic;
 using System.Windows;
@@ -46,6 +47,40 @@ namespace MasterPol.Contexts
                 MessageBox.Show("Непредвиденная ошибка", "Уведомление");
                 return null;
             }
+        }
+
+        public static string GetPartnerType(int idType)
+        {
+            return PartnersTypesContext.AllPartnerTypes().Find(x => x.id == idType).name;
+        }
+
+        public static string CountDiscount(int idPartner)
+        {
+            int productsCount = 0;
+            int discount = 0;
+            foreach (PartnerProductsModel model in PartnersProductsContext.AllPartnerProducts())
+            {
+                if (model.partner == idPartner)
+                    productsCount += model.count;
+            }
+            if (productsCount < 10000)
+                discount = 0;
+            else if (productsCount > 10000 && productsCount < 50000)
+                discount = 5;
+            else if (productsCount > 50000 && productsCount < 300000)
+                discount = 10;
+            else discount = 15;
+            return discount + "%";
+        }
+
+        public static List<PartnerItem> CreateItems()
+        {
+            List<PartnerItem> Items = new List<PartnerItem>();
+            foreach (PartnersModel model in AllPartners())
+            {
+                Items.Add(new PartnerItem(model));
+            }
+            return Items;
         }
     }
 }

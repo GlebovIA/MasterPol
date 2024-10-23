@@ -33,7 +33,7 @@ namespace MasterPol.Contexts
                             realCost = reader.GetInt32(9),
                             workshopNumber = reader.GetInt32(10),
                             countOfWorkers = reader.GetInt32(11),
-                            material = reader.GetString(12)
+                            materials = reader.GetString(12)
                         };
                         AllTypes.Add(type);
                     }

@@ -6,6 +6,6 @@
         public static string GetProductTypes = "Select * from Product_type";
         public static string GetProducts = "Select * from Product";
         public static string GetPartners = "Select * from Partners";
-        public static string GetPartnersProducts = "Select * from Partners_product";
+        public static string GetPartnersProducts = "Select * from Partners_products";
     }
 }
